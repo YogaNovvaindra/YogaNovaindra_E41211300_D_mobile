@@ -28,7 +28,7 @@
         <activity android:name=".materiandesign" android:exported="false"/>
         <activity android:name=".tabellayout" android:exported="false"/>
         <activity android:name=".framelayout" android:exported="false"/>
-        <activity android:name=".customize" android:exported="false" android:label="Constrain Layout"/>
+        <activity android:name=".constraint" android:exported="false" android:label="Constrain Layout"/>
         <activity android:name=".relativelayout" android:exported="false"/>
     </application>
 

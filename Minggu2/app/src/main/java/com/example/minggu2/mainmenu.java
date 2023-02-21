@@ -28,7 +28,7 @@ public class mainmenu extends AppCompatActivity {
         startActivity(intent);
     }
     public void menu3(View view){
-        Intent intent = new Intent(mainmenu.this,customize.class);
+        Intent intent = new Intent(mainmenu.this, constraint.class);
 
         startActivity(intent);
     }
