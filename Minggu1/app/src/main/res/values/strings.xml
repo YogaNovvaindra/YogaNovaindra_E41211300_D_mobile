@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Minggu 1</string>
+    <string name="to">to</string>
+    <string name="subject">subject</string>
+    <string name="message">message</string>
+    <string name="send">Send</string>
+    <string name="enter_data">Enter Data</string>
+    <string name="get_date">Get Date</string>
+    <string name="login">login</string>
+</resources>
