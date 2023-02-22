@@ -25,7 +25,7 @@
         </activity>
         <activity android:name=".horizontalscrooll" android:exported="false"/>
         <activity android:name=".vertikalscroll" android:exported="false"/>
-        <activity android:name=".materiandesign" android:exported="false"/>
+        <activity android:name=".materialdesign" android:exported="false"/>
         <activity android:name=".tabellayout" android:exported="false"/>
         <activity android:name=".framelayout" android:exported="false"/>
         <activity android:name=".constraint" android:exported="false" android:label="Constrain Layout"/>
