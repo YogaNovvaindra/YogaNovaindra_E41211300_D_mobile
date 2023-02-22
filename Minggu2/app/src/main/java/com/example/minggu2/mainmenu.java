@@ -45,7 +45,7 @@ public class mainmenu extends AppCompatActivity {
         startActivity(intent);
     }
     public void menu6(View view){
-        Intent intent = new Intent(mainmenu.this,materiandesign.class);
+        Intent intent = new Intent(mainmenu.this, materialdesign.class);
 
         startActivity(intent);
     }
