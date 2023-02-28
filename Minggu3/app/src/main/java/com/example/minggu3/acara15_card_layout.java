@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.minggu3.R;
-
-public class card_layout extends AppCompatActivity {
+public class acara15_card_layout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

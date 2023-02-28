@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MahasiswaViewHolder> {
+public class acara15_mahasiswa_adapter extends RecyclerView.Adapter<acara15_mahasiswa_adapter.MahasiswaViewHolder> {
 
-    private ArrayList<Mahasiswa> dataList;
+    private ArrayList<acara15_mahasiswa> dataList;
 
-    public MahasiswaAdapter(ArrayList<Mahasiswa> dataList) {
+    public acara15_mahasiswa_adapter(ArrayList<acara15_mahasiswa> dataList) {
         this.dataList = dataList;
     }
 

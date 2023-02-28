@@ -1,11 +1,11 @@
 package com.example.minggu3;
 
-public class Mahasiswa {
+public class acara15_mahasiswa {
     private String nama;
     private String npm;
     private String nohp;
 
-    public Mahasiswa (String nama,String npm,String nohp){
+    public acara15_mahasiswa(String nama, String npm, String nohp){
         this.nama = nama;
         this.npm = npm;
         this.nohp = nohp;

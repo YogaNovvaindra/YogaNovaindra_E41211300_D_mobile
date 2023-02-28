@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".acara14" android:exported="false"></activity>
-        <activity android:name=".acara15_main" android:exported="false"></activity>
+        <activity android:name=".acara15" android:exported="false"></activity>
     </application>
 
 </manifest>
