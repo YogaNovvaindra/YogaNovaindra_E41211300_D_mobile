@@ -19,7 +19,7 @@
         android:id="@+id/button_15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Acara 14"
+        android:text="Acara 15"
         app:layout_constraintBottom_toTopOf="@+id/button_15"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="56dp" />
