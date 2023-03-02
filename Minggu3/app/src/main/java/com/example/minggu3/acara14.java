@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
 public class acara14 extends AppCompatActivity implements AdapterView.OnItemClickListener {
     ListView listView;
     ArrayAdapter<CharSequence> adapter;

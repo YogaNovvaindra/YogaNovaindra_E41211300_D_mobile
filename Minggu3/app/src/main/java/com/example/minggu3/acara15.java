@@ -24,7 +24,6 @@ public class acara15 extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
-
     }
     void addData(){
         mahasiswaArrayList = new ArrayList<>();

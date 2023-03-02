@@ -1,4 +1,4 @@
-package com.example.minggu3;
+package com.example.minggu4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
         button14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,acara14.class);
+                Intent intent = new Intent(MainActivity.this, Acara18.class);
                 startActivity(intent);
             }
         });
         button15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, acara15.class);
+                Intent intent = new Intent(MainActivity.this, Acara19.class);
                 startActivity(intent);
             }
         });

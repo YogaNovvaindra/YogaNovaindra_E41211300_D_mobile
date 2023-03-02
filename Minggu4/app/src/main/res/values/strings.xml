@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Minggu4</string>
+    <string name="firstFragment">firstFragment</string>
+    <string name="secondFragment">secondFragment</string>
+    <string name="hello_second_fragment"/>
+    <string name="hello_first_fragment"/>
+</resources>

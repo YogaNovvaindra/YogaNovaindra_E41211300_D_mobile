@@ -43,8 +43,6 @@ public class relativelayout extends AppCompatActivity {
                             }
                         }, year, month, day);
                 picker.show();
-
-
             }
         });
         btnGet=(Button) findViewById(R.id.button1);
