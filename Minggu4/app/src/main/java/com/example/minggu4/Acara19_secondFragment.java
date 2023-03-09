@@ -1,28 +1,28 @@
+
 package com.example.minggu4;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
+import android.widget.Button;
+import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Acara19_secondFragment extends Fragment {
     View view;
-    TextView textView;
+    Button secondButton;
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.acara19_second_fragment, container, false);
-
-        textView = view.findViewById(R.id.Text);
-        textView.setText("Ini adalah fragment kedua");
-
+    public View onCreateView(LayoutInflater inflater,@Nullable ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.acara19_second_fragment, container, false);
+        secondButton = view.findViewById(R.id.secondButton);
+        secondButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Second Fragment", Toast.LENGTH_SHORT).show();
+            }
+        });
         return view;
-
     }
-
-
 }
