@@ -7,9 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-public class IntentExplicit extends AppCompatActivity {
+public class IntentExplicit extends MainActivity{
     EditText name;
     Button btnSend;
     private String KEY_NAME = "NAMA";
@@ -26,16 +25,16 @@ public class IntentExplicit extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     String nama = name.getText().toString();
-                    if (nama != "") {
+                    if (!nama.equals("")) {
                         Intent i = new Intent(IntentExplicit.this, IntentExplicit2.class);
                         i.putExtra(KEY_NAME, nama);
                         startActivity(i);
                     } else {
-                        Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME", Toast.LENGTH_SHORT);
+                        Toast.makeText(getApplication(), "YOU NEED TO FILL YOUR NAME", Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT);
+                    Toast.makeText(getApplication(), "ERROR, TRY AGAIN !", Toast.LENGTH_SHORT).show();
                 }
             }
         });

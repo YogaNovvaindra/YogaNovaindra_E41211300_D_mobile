@@ -3,9 +3,8 @@ package com.example.minggu5;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-public class IntentExplicit2 extends AppCompatActivity {
+public class IntentExplicit2 extends IntentExplicit {
     TextView txtHello;
     private String nama;
     private String KEY_NAME = "NAMA";
