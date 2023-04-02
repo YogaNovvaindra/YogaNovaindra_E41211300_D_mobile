@@ -12,17 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Minggu6"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
         <activity
-            android:name=".Acara26"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Acara26_2" android:exported="false"></activity>
+        <activity android:name=".Acara26" android:exported="false"/>
+        <activity android:name=".Acara26_2" android:exported="false"/>
+        <activity android:name=".Acara28" android:exported="false"/>
+        <activity android:name=".Acara28_lihat" android:exported="false"/>
+        <activity android:name=".Acara28_buat" android:exported="false"/>
+        <activity android:name=".Acara28_update" android:exported="false"/>
     </application>
 
 </manifest>
