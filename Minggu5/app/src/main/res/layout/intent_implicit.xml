@@ -24,8 +24,6 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="156dp"
         android:layout_marginTop="172dp"
         android:text="@string/visit"
         app:layout_constraintEnd_toEndOf="parent"
