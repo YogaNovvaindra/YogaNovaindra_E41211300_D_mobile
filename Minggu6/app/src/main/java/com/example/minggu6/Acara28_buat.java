@@ -25,14 +25,14 @@ public class Acara28_buat extends Acara28{
         setContentView(R.layout.acara28_buat);
 
         dbHelper = new Acara28_helper(this);
-        text1 = (EditText) findViewById(R.id.editText1);
-        text2 = (EditText) findViewById(R.id.editText2);
-        text3 = (EditText) findViewById(R.id.editText3);
-        radio1 = (RadioButton) findViewById(R.id.radioButton1);
-        radio2 = (RadioButton) findViewById(R.id.radioButton2);
-        text5 = (EditText) findViewById(R.id.editText5);
-        ton1 = (Button) findViewById(R.id.button1);
-        ton2 = (Button) findViewById(R.id.button2);
+        text1 = findViewById(R.id.editText1);
+        text2 = findViewById(R.id.editText2);
+        text3 = findViewById(R.id.editText3);
+        radio1 = findViewById(R.id.radioButton1);
+        radio2 = findViewById(R.id.radioButton2);
+        text5 = findViewById(R.id.editText5);
+        ton1 = findViewById(R.id.button1);
+        ton2 = findViewById(R.id.button2);
 
         text3.setOnClickListener((arg0) -> {
             // buat datepicker dialog dan tampilkan pada text3

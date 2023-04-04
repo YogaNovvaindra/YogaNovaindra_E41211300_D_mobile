@@ -11,8 +11,8 @@ public class MainActivity extends AppCompatActivity {
     Button button14, button15;
 
     private void initComponent() {
-        button14  = (Button) findViewById(R.id.button_26);
-        button15  = (Button) findViewById(R.id.button_28);
+        button14  = findViewById(R.id.button_26);
+        button15  = findViewById(R.id.button_28);
     }
 
     @Override
@@ -21,19 +21,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initComponent();
 
-        button14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Acara26.class);
-                startActivity(intent);
-            }
+        button14.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this,Acara26.class);
+            startActivity(intent);
         });
-        button15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Acara28.class);
-                startActivity(intent);
-            }
+        button15.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Acara28.class);
+            startActivity(intent);
         });
     }
 }

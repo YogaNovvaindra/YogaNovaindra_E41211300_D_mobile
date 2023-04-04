@@ -19,7 +19,7 @@ public class Acara28_helper extends SQLiteOpenHelper {
         String sql = "create table biodata(no integer primary key, nama text null, tgl text null, jk text null, alamat text null);";
         Log.d("Data", "onCreate: " + sql);
         db.execSQL(sql);
-        sql = "INSERT INTO Biodata (no, nama, tgl, jk, alamat) VALUES ('1', 'Yoga', '2000-01-01', 'Laki-laki', 'Jl. Jalan');";
+        sql = "INSERT INTO Biodata (no, nama, tgl, jk, alamat) VALUES ('1', 'Yoga', '2000-11-11', 'Laki-laki', 'Jl. Jalan');";
         db.execSQL(sql);
     }
 
