@@ -21,7 +21,7 @@ public class Acara26 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acara26);
-        editText = (EditText) findViewById(R.id.editText);
+        editText = findViewById(R.id.editText);
     }
 
     public void next(View view) {
