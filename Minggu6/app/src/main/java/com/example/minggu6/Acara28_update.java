@@ -25,13 +25,38 @@ public class Acara28_update extends Acara28{
         setContentView(R.layout.acara28_update);
 
         dbHelper = new Acara28_helper(this);
-        text1 = (EditText) findViewById(R.id.editText1);
-        text2 = (EditText) findViewById(R.id.editText2);
-        text3 = (EditText) findViewById(R.id.editText3);
+        text1 = findViewById(R.id.editText1);
+        text2 = findViewById(R.id.editText2);
+        text3 = findViewById(R.id.editText3);
+
+        radio1 = findViewById(R.id.radioButton1);
+        radio2 = findViewById(R.id.radioButton2);
+        text5 = findViewById(R.id.editText5);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        cursor = db.rawQuery("SELECT * FROM biodata WHERE nama = '" +
+                getIntent().getStringExtra("nama") + "'", null);
+        cursor.moveToFirst();
+        if (cursor.getCount()>0) {
+            cursor.moveToPosition(0);
+            //make text1 not editable
+            text1.setEnabled(false);
+            text1.setText(cursor.getString(0));
+            text2.setText(cursor.getString(1));
+            text3.setText(cursor.getString(2));
+            if (cursor.getString(3).equals("Laki-laki")) {
+                radio1.setChecked(true);
+            } else if (cursor.getString(3).equals("Perempuan")){
+                radio2.setChecked(true);
+            }
+            text5.setText(cursor.getString(4));
+        }
 
         text3.setOnClickListener((arg0) -> {
             // buat datepicker dialog dan tampilkan pada text3
             Calendar newCalendar = Calendar.getInstance();
+            //set date picker dialog value from text3
+            String[] date = text3.getText().toString().split("-");
+            newCalendar.set(Integer.parseInt(date[0]), Integer.parseInt(date[1]) - 1, Integer.parseInt(date[2]));
             DatePickerDialog datePickerDialog = new DatePickerDialog(Acara28_update.this, (view, year, monthOfYear, dayOfMonth) -> {
                 // set date pada text3 format yyyy-mm-dd
                 text3.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
@@ -39,34 +64,15 @@ public class Acara28_update extends Acara28{
             datePickerDialog.show();
         });
 
-        radio1 = (RadioButton) findViewById(R.id.radioButton1);
-        radio2 = (RadioButton) findViewById(R.id.radioButton2);
-        text5 = (EditText) findViewById(R.id.editText5);
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-        cursor = db.rawQuery("SELECT * FROM biodata WHERE nama = '" +
-                getIntent().getStringExtra("nama") + "'", null);
-        cursor.moveToFirst();
-        if (cursor.getCount()>0) {
-            cursor.moveToPosition(0);
-            text1.setText(cursor.getString(0).toString());
-            text2.setText(cursor.getString(1).toString());
-            text3.setText(cursor.getString(2).toString());
-            if (cursor.getString(3).toString().equals("Laki-laki")) {
-                radio1.setChecked(true);
-            } else if (cursor.getString(3).toString().equals("Perempuan")){
-                radio2.setChecked(true);
-            }
-            text5.setText(cursor.getString(4).toString());
-        }
-        ton1 = (Button) findViewById(R.id.button1);
-        ton2 = (Button) findViewById(R.id.button2);
+        ton1 = findViewById(R.id.button1);
+        ton2 = findViewById(R.id.button2);
         // daftarkan even onClick pada btnSimpan
         ton1.setOnClickListener((arg0) -> {
             // TODO Auto-generated method stub
             String no = text1.getText().toString();
             String nama = text2.getText().toString();
             String tgl = text3.getText().toString();
-            String jk = null;
+            String jk;
             if (radio1.isChecked()) {
                 jk = radio1.getText().toString();
             } else {
@@ -74,8 +80,8 @@ public class Acara28_update extends Acara28{
             }
             String alamat = text5.getText().toString();
             SQLiteDatabase db1 = dbHelper.getWritableDatabase();
-            db1.execSQL("update biodata set no='" + no + "', nama='" + nama + "', tgl='" + tgl + "', " +
-                    "jk='" + jk + "', alamat='" + alamat + "' where nama='" + nama + "'");
+            db1.execSQL("update biodata set nama='" + nama + "', nama='" + nama + "', tgl='" + tgl + "', " +
+                    "jk='" + jk + "', alamat='" + alamat + "' where no='" + no + "'");
             Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
             Acara28.ma.RefreshList();
             finish();

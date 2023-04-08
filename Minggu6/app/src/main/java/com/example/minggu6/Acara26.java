@@ -21,7 +21,7 @@ public class Acara26 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acara26);
-        editText = (EditText) findViewById(R.id.editText);
+        editText = findViewById(R.id.editText);
     }
 
     public void next(View view) {
@@ -36,16 +36,24 @@ public class Acara26 extends AppCompatActivity {
         String info = editText.getText().toString();
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File myFile = new File(folder, "myData.txt");
-        writeData(myFile, info);
-        editText.setText("");
+        if (info.isEmpty()) {
+            Toast.makeText(this, "Please enter data", Toast.LENGTH_SHORT).show();
+        } else {
+            writeData(myFile, info);
+            editText.setText("");
+        }
     }
 
     public void savePrivate(View view) {
         String info = editText.getText().toString();
         File folder = getExternalFilesDir("Yoga");
         File myFile = new File(folder, "myData2.txt");
-        writeData(myFile, info);
-        editText.setText("");
+        if (info.isEmpty()) {
+            Toast.makeText(this, "Please enter data", Toast.LENGTH_SHORT).show();
+        } else {
+            writeData(myFile, info);
+            editText.setText("");
+        }
     }
 
     private void writeData(File myFile, String data) {

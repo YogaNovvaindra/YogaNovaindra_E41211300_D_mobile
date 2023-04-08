@@ -19,11 +19,11 @@ public class Acara28_lihat extends Acara28{
         setContentView(R.layout.acara28_lihat);
 
         dbHelper = new Acara28_helper(this);
-        text1 = (TextView) findViewById(R.id.textView1);
-        text2 = (TextView) findViewById(R.id.textView2);
-        text3 = (TextView) findViewById(R.id.textView3);
-        text4 = (TextView) findViewById(R.id.textView4);
-        text5 = (TextView) findViewById(R.id.textView5);
+        text1 = findViewById(R.id.textView1);
+        text2 = findViewById(R.id.textView2);
+        text3 = findViewById(R.id.textView3);
+        text4 = findViewById(R.id.textView4);
+        text5 = findViewById(R.id.textView5);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM biodata WHERE nama = '" +
                 getIntent().getStringExtra("nama") + "'", null);
@@ -31,13 +31,13 @@ public class Acara28_lihat extends Acara28{
         if (cursor.getCount()>0)
         {
             cursor.moveToPosition(0);
-            text1.setText(cursor.getString(0).toString());
-            text2.setText(cursor.getString(1).toString());
-            text3.setText(cursor.getString(2).toString());
-            text4.setText(cursor.getString(3).toString());
-            text5.setText(cursor.getString(4).toString());
+            text1.setText(cursor.getString(0));
+            text2.setText(cursor.getString(1));
+            text3.setText(cursor.getString(2));
+            text4.setText(cursor.getString(3));
+            text5.setText(cursor.getString(4));
         }
-        ton2 = (Button) findViewById(R.id.button1);
+        ton2 = findViewById(R.id.button1);
         ton2.setOnClickListener((arg0) -> {
             // TODO Auto-generated method stub
             finish();
