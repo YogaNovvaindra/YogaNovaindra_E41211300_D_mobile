@@ -55,7 +55,6 @@
             android:id="@+id/et_passwordSignin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
             android:hint="Password"
             android:inputType="textPassword"
             android:maxLines="1"
@@ -65,11 +64,17 @@
             android:imeOptions="actionDone" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <CheckBox
+        android:id="@+id/checkbox_rememberSignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Remember me" />
+
     <Button
         android:id="@+id/button_signinSignin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
         android:text="Log In"
         android:textColor="#FFF"
         android:backgroundTint="@color/blue" />

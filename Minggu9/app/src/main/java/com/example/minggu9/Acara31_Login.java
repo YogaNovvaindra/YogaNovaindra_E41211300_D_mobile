@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Acara31_Login extends AppCompatActivity {
 
     private EditText mViewUser, mViewPassword;
+    private CheckBox mCheckBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,10 +88,18 @@ public class Acara31_Login extends AppCompatActivity {
 
 
     private void signin(){
-        Preferences.setLoggedInUser(getBaseContext(),Preferences.getRegisteredUser(getBaseContext()));
-        Preferences.setLoggedInStatus(getBaseContext(),true);
-        startActivity(new Intent(getBaseContext(), Acara31_Main.class));
-        finish();
+        mCheckBox = findViewById(R.id.checkbox_rememberSignin);
+        if (mCheckBox.isChecked()){
+            Preferences.setLoggedInUser(getBaseContext(), Preferences.getRegisteredUser(getBaseContext()));
+            Preferences.setLoggedInStatus(getBaseContext(), true);
+            startActivity(new Intent(getBaseContext(), Acara31_Main.class));
+            finish();
+        } else {
+            Preferences.setLoggedInUser(getBaseContext(), Preferences.getRegisteredUser(getBaseContext()));
+            Preferences.setLoggedInStatus(getBaseContext(), false);
+            startActivity(new Intent(getBaseContext(), Acara31_Main.class));
+            finish();
+        }
     }
 
     private boolean checkPassword(String password){
