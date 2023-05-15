@@ -18,7 +18,4 @@ public interface ApiEndpoint {
     @GET("3/movie/{movieid}/recommendations?api_key=b456fd8da00340cb36b7fcae5d0273af&language=en-US&page=1")
     Call<MovieResult> getReccomendations(@Path(value = "movieid",encoded = true) String movieId);
 
-
-    // image https://image.tmdb.org/t/p/w780/
-    //https://image.tmdb.org/t/p/w500/
 }

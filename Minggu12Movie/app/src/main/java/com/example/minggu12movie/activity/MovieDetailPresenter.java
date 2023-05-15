@@ -13,11 +13,9 @@ public class MovieDetailPresenter implements MovieDetailInteractor.onMovieClicke
     }
 
     public void getMovieById(String movieId){
-
         interactor.getMovieById(movieId,this);
         interactor.getMovieReccomendation(movieId,this);
     }
-
 
     @Override
     public void onApiSuccess() {
@@ -29,7 +27,6 @@ public class MovieDetailPresenter implements MovieDetailInteractor.onMovieClicke
             else{
                 view.setErrorMsg(interactor.getErrorMsg());
             }
-
         }
     }
 

@@ -75,24 +75,20 @@ public class MovieDetail extends AppCompatActivity implements MovieDetailView {
         movieDescription.setText(movie.getDescription());
         releaseDate.setText(movie.getRelease_date());
         movieTitle.setText(movie.getTitle());
-        movieRating.setText(Float.toString(movie.getVote_average()) + "/10");
-        Glide.with(getApplicationContext()).load("https://image.tmdb.org/t/p/w500/" + movie.getImg_path())
-                .into(movieImg);
+        movieRating.setText(movie.getVote_average() + "/10");
+        Glide.with(getApplicationContext()).load("https://image.tmdb.org/t/p/w500/" + movie.getImg_path()).into(movieImg);
         progressBar.setProgress((int)movie.getVote_average());
     }
 
     @Override
     public void setErrorMsg(String errorMsg) {
-
         movieRecommendations.setVisibility(View.GONE);
     }
 
     @Override
     public void setAdapter(ArrayList<Movie> movieArrayList) {
-
         MovieDetailAdapter adapter = new MovieDetailAdapter(movieArrayList,this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
-
         movieRecommendations.setVisibility(View.VISIBLE);
         movieRecommendations.setLayoutManager(layoutManager);
         movieRecommendations.setItemAnimator(new DefaultItemAnimator());

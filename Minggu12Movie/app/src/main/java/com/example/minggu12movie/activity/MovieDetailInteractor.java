@@ -52,9 +52,6 @@ public class MovieDetailInteractor {
                 listener.onApiFailed();
             }
         });
-
-
-
     }
 
     public void getMovieReccomendation(String movieId, final onMovieClickedListener listener){
@@ -76,8 +73,5 @@ public class MovieDetailInteractor {
                 listener.onApiFailed();
             }
         });
-
-
-
     }
 }

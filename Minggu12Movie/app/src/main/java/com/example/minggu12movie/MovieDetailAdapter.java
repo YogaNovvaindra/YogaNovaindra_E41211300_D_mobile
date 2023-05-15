@@ -49,7 +49,6 @@ public class MovieDetailAdapter extends RecyclerView.Adapter<MovieDetailAdapter.
             movieDesc = view.findViewById(R.id.movieDescription);
             moviePoster = view.findViewById(R.id.movieImage);
             cardView = view.findViewById(R.id.cardView);
-
         }
     }
 

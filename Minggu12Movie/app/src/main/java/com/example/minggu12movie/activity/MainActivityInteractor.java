@@ -19,10 +19,8 @@ public class MainActivityInteractor {
     private String mcategory;
 
     public interface onAppStartedListener{
-
         void onApiSuccess();
         void onApiFailed();
-
     }
 
     // ini pake getter boleh ga ya?
